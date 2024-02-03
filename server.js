@@ -1,6 +1,7 @@
 import express from "express";
 import pg from "pg";
 import dotenv from "dotenv";
+import cors from "cors";
 
 dotenv.config();
 
@@ -11,6 +12,7 @@ const client = new pg.Client({ connectionString: DATABASE_URL });
 
 await client.connect();
 app.use(express.json());
+app.use(cors());
 
 app.get("/", (_, res) => {
   res.send("Hello, friends...");
