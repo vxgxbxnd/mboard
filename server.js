@@ -23,9 +23,7 @@ app.post("/guestbook", postEntry);
 
 async function getPosts(_, res, next) {
   try {
-    const response = await client.query(
-      "SELECT * FROM guestbook ORDER BY id DESC"
-    );
+    const response = await client.query("SELECT * FROM guestbook");
     const data = await response;
     res.send(data.rows);
   } catch (error) {
