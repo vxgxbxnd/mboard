@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS guestbook;
+DROP TABLE IF EXISTS mb;
 
-CREATE TABLE "guestbook"(
+CREATE TABLE "mb"(
     "id" SERIAL PRIMARY KEY,
     "username" TEXT NOT NULL,
     "entry" TEXT NOT NULL,
