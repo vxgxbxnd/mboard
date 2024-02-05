@@ -18,8 +18,8 @@ app.get("/", (_, res) => {
   res.send("Hello, friends...");
 });
 
-app.get("/guestbook", getPosts);
-app.post("/guestbook", postEntry);
+app.get("/mboard", getPosts);
+app.post("/mboard", postEntry);
 
 async function getPosts(_, res, next) {
   try {
@@ -55,4 +55,4 @@ app.use((err, req, res, next) => {
   throw err;
 });
 
-app.listen(PORT, () => console.log(`listening on PORT ${PORT}`));
+app.listen(PORT, () => console.log(`listening on port ${PORT}`));
