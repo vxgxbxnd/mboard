@@ -15,9 +15,9 @@ await client.connect();
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (_, res) => {
-  res.send("Hello, friends...");
-});
+// app.get("/", (_, res) => {
+//   res.send("Hello, friends...");
+// });
 
 app.get("/mboard", getPosts);
 app.post("/mboard", postEntry);
