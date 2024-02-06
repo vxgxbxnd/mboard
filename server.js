@@ -11,13 +11,8 @@ const client = new pg.Client({ connectionString: DATABASE_URL });
 
 await client.connect();
 
-// app.use(express.static("public"));
 app.use(cors());
 app.use(express.json());
-
-// app.get("/", (_, res) => {
-//   res.send("Hello, friends...");
-// });
 
 app.get("/mboard", getPosts);
 app.post("/mboard", postEntry);
